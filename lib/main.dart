@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         '/pecel': (context) => const pecel(),
         '/rawon': (context) => const rawon(),
         '/segoresek': (context) => const segoresek(),
-        '/jtpsatu': (context) => const jtpsatu(),
+        '/jtpsatu': (context) => const Jtpsatu(),
         '/jtpdua': (context) => const jtpdua(),
         '/kww': (context) => const kww(),
         '/musangkut': (context) => const musangkut(),

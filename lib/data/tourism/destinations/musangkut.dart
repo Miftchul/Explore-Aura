@@ -6,8 +6,14 @@ class musangkut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bakso')),
-      body: const Center(child: Text('Ini adalah halaman Bakso')),
+      appBar: AppBar(title: const Text('Jatim Park 1')),
+      body: const Center(
+        child: Text(
+          'Selamat datang di Jatim Park 1, destinasi wisata edukasi dan rekreasi terbaik!',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 18),
+        ),
+      ),
     );
   }
 }

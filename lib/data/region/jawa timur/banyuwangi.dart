@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Banyuwangi extends StatelessWidget {
-  const Banyuwangi({super.key});
+const Banyuwangi({super.key});
 
   @override
   Widget build(BuildContext context) {
