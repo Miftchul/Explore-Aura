@@ -1,3 +1,4 @@
+import 'package:eav1/data/beverages/esteh.dart';
 import 'package:flutter/material.dart';
 import 'screen/splash_screen.dart';
 import 'data/food/bakso.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         '/jtpdua': (context) => const jtpdua(),
         '/kww': (context) => const kww(),
         '/musangkut': (context) => const musangkut(),
+        '/esteh': (context) => const Esteh(),
 
       },
     );

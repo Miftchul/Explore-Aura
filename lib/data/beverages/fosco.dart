@@ -6,7 +6,7 @@ class fosco extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bakso')),
+      appBar: AppBar(title: const Text('Fosco')),
       body: const Center(child: Text('Ini adalah halaman Bakso')),
     );
   }
