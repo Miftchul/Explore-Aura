@@ -10,9 +10,9 @@ class BaksoPage extends StatefulWidget {
 
 class _BaksoPageState extends State<BaksoPage> {
   final List<String> images = [
-    'assets/imagehome.png',
-    'assets/imageprovinsi.png',
-    'assets/destinasiwisata.png',
+    'assets/baksobakar5.jpg',
+    'assets/baksobakar3.jpg',
+    'assets/baksobakar1.jpg',
   ];
 
   final PageController _pageController = PageController();

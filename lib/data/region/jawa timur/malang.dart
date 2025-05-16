@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Malang extends StatelessWidget {
-const Malang({super.key});
+  const Malang({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,10 @@ const Malang({super.key});
               ),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 24,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -42,16 +45,51 @@ const Malang({super.key});
                       const SizedBox(height: 12),
                       _HorizontalCardList(
                         items: [
-                          _CardItem(title: 'Bakso', imagePath: 'assets/bakso.jpg', route: '/bakso'),
-                          _CardItem(title: 'Sego Resek', imagePath: 'assets/segoresek.jpg', route: '/segoresek'),
-                          _CardItem(title: 'Rawon', imagePath: 'assets/rawon.jpg', route: '/rawon'),
-                          _CardItem(title: 'Mie', imagePath: 'assets/mie.jpg', route: '/mie'),
-                          _CardItem(title: 'Pecel', imagePath: 'assets/pecel.jpg', route: '/pecel'),
-                          _CardItem(title: 'Fosco', imagePath: 'assets/fosco.jpg', route: '/fosco'),
-                          _CardItem(title: 'Es Tawon Kidul', imagePath: 'assets/eskidul.jpg', route: '/eskidul'),
-                          _CardItem(title: 'Es Santan', imagePath: 'assets/essantan.jpg', route: '/essantan'),
-                          _CardItem(title: 'Es Alpukat Moka', imagePath: 'assets/esalpukat.jpg', route: '/esalpukat'),
-
+                          _CardItem(
+                            title: 'Bakso Bakar',
+                            imagePath: 'assets/bakso.jpg',
+                            route: '/bakso',
+                          ),
+                          _CardItem(
+                            title: 'Sego Resek',
+                            imagePath: 'assets/segoresek.jpg',
+                            route: '/segoresek',
+                          ),
+                          _CardItem(
+                            title: 'Rawon',
+                            imagePath: 'assets/rawon.jpg',
+                            route: '/rawon',
+                          ),
+                          _CardItem(
+                            title: 'Mie',
+                            imagePath: 'assets/mie.jpg',
+                            route: '/mie',
+                          ),
+                          _CardItem(
+                            title: 'Pecel',
+                            imagePath: 'assets/pecel.jpg',
+                            route: '/pecel',
+                          ),
+                          _CardItem(
+                            title: 'Fosco',
+                            imagePath: 'assets/fosco.jpg',
+                            route: '/fosco',
+                          ),
+                          _CardItem(
+                            title: 'Es Tawon Kidul',
+                            imagePath: 'assets/eskidul.jpg',
+                            route: '/eskidul',
+                          ),
+                          _CardItem(
+                            title: 'Es Santan',
+                            imagePath: 'assets/essantan.jpg',
+                            route: '/essantan',
+                          ),
+                          _CardItem(
+                            title: 'Es Alpukat Moka',
+                            imagePath: 'assets/esalpukat.jpg',
+                            route: '/esalpukat',
+                          ),
                         ],
                       ),
                       const SizedBox(height: 32),
@@ -64,10 +102,26 @@ const Malang({super.key});
                       const SizedBox(height: 12),
                       _HorizontalCardList(
                         items: [
-                          _CardItem(title: 'Jatim Park I', imagePath: 'assets/jtpsatu.jpg', route: '/jtpsatu'),
-                          _CardItem(title: 'Jatim Park II', imagePath: 'assets/jtpdua.jpg', route: '/jtpdua'),
-                          _CardItem(title: 'Kampung Warna-Warni', imagePath: 'assets/kww.jpg', route: '/kww'),
-                          _CardItem(title: 'Museum Angkut', imagePath: 'assets/musangkut.jpg', route: '/musangkut'),
+                          _CardItem(
+                            title: 'Jatim Park I',
+                            imagePath: 'assets/jtpsatu.jpg',
+                            route: '/jtpsatu',
+                          ),
+                          _CardItem(
+                            title: 'Jatim Park II',
+                            imagePath: 'assets/jtpdua.jpg',
+                            route: '/jtpdua',
+                          ),
+                          _CardItem(
+                            title: 'Kampung Warna-Warni',
+                            imagePath: 'assets/kww.jpg',
+                            route: '/kww',
+                          ),
+                          _CardItem(
+                            title: 'Museum Angkut',
+                            imagePath: 'assets/musangkut.jpg',
+                            route: '/musangkut',
+                          ),
                         ],
                       ),
                     ],
@@ -100,10 +154,7 @@ class _CategoryLabel extends StatelessWidget {
   final IconData icon;
   final String label;
 
-  const _CategoryLabel({
-    required this.icon,
-    required this.label,
-  });
+  const _CategoryLabel({required this.icon, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -118,10 +169,7 @@ class _CategoryLabel extends StatelessWidget {
         children: [
           Icon(icon, size: 20),
           const SizedBox(width: 8),
-          Text(
-            label,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
+          Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -145,9 +193,7 @@ class _CardItem {
 class _HorizontalCardList extends StatelessWidget {
   final List<_CardItem> items;
 
-  const _HorizontalCardList({
-    required this.items,
-  });
+  const _HorizontalCardList({required this.items});
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +226,9 @@ class _HorizontalCardList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ClipRRect(
-                    borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(24),
+                    ),
                     child: Image.asset(
                       item.imagePath,
                       height: 110,
