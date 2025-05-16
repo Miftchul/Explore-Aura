@@ -61,7 +61,7 @@ class Malang extends StatelessWidget {
                             route: '/rawon',
                           ),
                           _CardItem(
-                            title: 'Mie',
+                            title: 'Cwie Mie Depot Hok Lay',
                             imagePath: 'assets/mie.jpg',
                             route: '/mie',
                           ),
