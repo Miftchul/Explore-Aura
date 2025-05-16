@@ -1,7 +1,14 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 
-class BaksoPage extends StatelessWidget {
-  // const BaksoPage({super.key});
+class BaksoPage extends StatefulWidget {
+  const BaksoPage({super.key});
+
+  @override
+  State<BaksoPage> createState() => _BaksoPageState();
+}
+
+class _BaksoPageState extends State<BaksoPage> {
   final List<String> images = [
     'assets/imagehome.png',
     'assets/imageprovinsi.png',
@@ -9,13 +16,41 @@ class BaksoPage extends StatelessWidget {
   ];
 
   final PageController _pageController = PageController();
+  int _currentPage = 0;
+  Timer? _timer;
 
-  BaksoPage({super.key});
+  @override
+  void initState() {
+    super.initState();
+    _startAutoSlide();
+  }
+
+  void _startAutoSlide() {
+    _timer = Timer.periodic(const Duration(seconds: 4), (Timer timer) {
+      if (_currentPage < images.length - 1) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Custom AppBar
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
@@ -35,9 +70,7 @@ class BaksoPage extends StatelessWidget {
           ),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back, color: Colors.white),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+            onPressed: () => Navigator.pop(context),
           ),
         ),
       ),
@@ -45,17 +78,14 @@ class BaksoPage extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 24),
-
-            // Gambar + panah kiri kanan
             Container(
               height: 200,
               margin: const EdgeInsets.symmetric(horizontal: 24),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Colors.grey[300], // warna latar belakang opsional
+                color: Colors.grey[300],
               ),
-              clipBehavior:
-                  Clip.antiAlias, // agar child ter-clip sesuai border radius
+              clipBehavior: Clip.antiAlias,
               child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
@@ -69,9 +99,10 @@ class BaksoPage extends StatelessWidget {
                         width: double.infinity,
                       );
                     },
+                    onPageChanged: (index) {
+                      _currentPage = index;
+                    },
                   ),
-
-                  // Panah kiri di tengah
                   Positioned(
                     left: 10,
                     child: IconButton(
@@ -85,8 +116,6 @@ class BaksoPage extends StatelessWidget {
                       },
                     ),
                   ),
-
-                  // Panah kanan di tengah
                   Positioned(
                     right: 10,
                     child: IconButton(
@@ -103,16 +132,12 @@ class BaksoPage extends StatelessWidget {
                 ],
               ),
             ),
-
             const SizedBox(height: 24),
-
-            // Judul dan deskripsi
             const Text(
               'Bakso Bakar',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
@@ -122,7 +147,6 @@ class BaksoPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
@@ -132,7 +156,6 @@ class BaksoPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
@@ -142,7 +165,6 @@ class BaksoPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
@@ -151,10 +173,7 @@ class BaksoPage extends StatelessWidget {
                 style: TextStyle(fontSize: 16, height: 1.6),
               ),
             ),
-
             const SizedBox(height: 32),
-
-            // Fun Fact Card
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24),
               padding: const EdgeInsets.all(20),
@@ -187,14 +206,13 @@ class BaksoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'Bakso bakar merupakan inovasi khas malang yang kini populer di berbagai kota di indonesia',
+                    'Bakso bakar merupakan inovasi khas Malang yang kini populer di berbagai kota di Indonesia',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 15, height: 1.6),
                   ),
                 ],
               ),
             ),
-
             const SizedBox(height: 40),
           ],
         ),
