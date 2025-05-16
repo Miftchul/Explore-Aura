@@ -65,7 +65,7 @@ class _segoresekState extends State<segoresek> {
             ),
           ),
           title: const Text(
-            'Makanan & Minuman',
+            'Makanan',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
@@ -196,7 +196,7 @@ class _segoresekState extends State<segoresek> {
                       Icon(Icons.lightbulb_outline, size: 24),
                       SizedBox(width: 8),
                       Text(
-                        'Fun Fact Bakso Bakar',
+                        'Fun Fact Sego Resek',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,

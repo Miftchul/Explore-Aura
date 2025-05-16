@@ -65,7 +65,7 @@ class _BaksoPageState extends State<BaksoPage> {
             ),
           ),
           title: const Text(
-            'Makanan & Minuman',
+            'Makanan',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
