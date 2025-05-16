@@ -48,77 +48,105 @@ class BaksoPage extends StatelessWidget {
 
             // Gambar + panah kiri kanan
             Container(
-  height: 200,
-  margin: const EdgeInsets.symmetric(horizontal: 24),
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(30),
-    color: Colors.grey[300], // warna latar belakang opsional
-  ),
-  clipBehavior: Clip.antiAlias, // agar child ter-clip sesuai border radius
-  child: Stack(
-    alignment: Alignment.center,
-    children: <Widget>[
-      PageView.builder(
-        controller: _pageController,
-        itemCount: images.length,
-        itemBuilder: (context, index) {
-          return Image.asset(
-            images[index],
-            fit: BoxFit.cover,
-            width: double.infinity,
-          );
-        },
-      ),
+              height: 200,
+              margin: const EdgeInsets.symmetric(horizontal: 24),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.grey[300], // warna latar belakang opsional
+              ),
+              clipBehavior:
+                  Clip.antiAlias, // agar child ter-clip sesuai border radius
+              child: Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  PageView.builder(
+                    controller: _pageController,
+                    itemCount: images.length,
+                    itemBuilder: (context, index) {
+                      return Image.asset(
+                        images[index],
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      );
+                    },
+                  ),
 
-      // Panah kiri di tengah
-      Positioned(
-        left: 10,
-        child: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          color: Colors.white,
-          onPressed: () {
-            _pageController.previousPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-            );
-          },
-        ),
-      ),
+                  // Panah kiri di tengah
+                  Positioned(
+                    left: 10,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back_ios),
+                      color: Colors.white,
+                      onPressed: () {
+                        _pageController.previousPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                    ),
+                  ),
 
-      // Panah kanan di tengah
-      Positioned(
-        right: 10,
-        child: IconButton(
-          icon: const Icon(Icons.arrow_forward_ios),
-          color: Colors.white,
-          onPressed: () {
-            _pageController.nextPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut,
-            );
-          },
-        ),
-      ),
-    ],
-  ),
-),
-
+                  // Panah kanan di tengah
+                  Positioned(
+                    right: 10,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_forward_ios),
+                      color: Colors.white,
+                      onPressed: () {
+                        _pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
             const SizedBox(height: 24),
 
             // Judul dan deskripsi
             const Text(
-              'Rawon',
+              'Bakso Bakar',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
+
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, '
-                'when an unknown printer took a galley of type and scrambled it to make a type specimen book. '
-                'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                'Jl. Pahlawan Trip No.3A, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, height: 1.6),
+              ),
+            ),
+            const SizedBox(height: 10),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                '2 Km dari Pusat Kota Malang',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, height: 1.6),
+              ),
+            ),
+            const SizedBox(height: 10),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Rp. 5.000 - Rp. 10.000 / Porsi',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, height: 1.6),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Bakso yang dibakar di atas bara api, yang dioles dengan bumbu manis pedas memberikan cita rasa khas dan berbeda dari bakso pada umumnya',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, height: 1.6),
               ),
@@ -149,7 +177,7 @@ class BaksoPage extends StatelessWidget {
                       Icon(Icons.lightbulb_outline, size: 24),
                       SizedBox(width: 8),
                       Text(
-                        'Fun Fact Rawon',
+                        'Fun Fact Bakso Bakar',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -159,9 +187,8 @@ class BaksoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                    'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, '
-                    'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                    'Bakso bakar merupakan inovasi khas malang yang kini populer di berbagai kota di indonesia',
+                    textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 15, height: 1.6),
                   ),
                 ],
