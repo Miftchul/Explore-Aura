@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'yogya.dart';
-import 'bantul.dart';
-import 'sleman.dart';
+import 'surabaya/surabaya.dart'; // Pastikan file jawatimur.dart ada di direktori yang benar
+import 'malang/malang.dart'; // Pastikan file jawabarat.dart ada di direktori yang benar
+import 'banyuwangi/banyuwangi.dart'; // Pastikan file bali.dart ada di direktori yang benar
+import 'batu/batu.dart';
 
-class Yogyakarta extends StatelessWidget {
-final List<String> images = [
+class Jawatimur extends StatelessWidget {
+  final List<String> images = [
     'assets/imagehome.png',
     'assets/imageprovinsi.png',
     'assets/destinasiwisata.png',
@@ -12,7 +13,7 @@ final List<String> images = [
 
   final PageController _pageController = PageController();
 
-  Yogyakarta({super.key});
+  Jawatimur({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +74,7 @@ final List<String> images = [
             ),
             SizedBox(height: 20),
             Text(
-              'Jelajahi Provinsi Yogyakarta',
+              'Jelajahi Provinsi Jawa Timur',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ final List<String> images = [
             ),
             SizedBox(height: 10),
             Text(
-              'Temukan keragaman & keindahan Provinsi Yogyakarta',
+              'Temukan keragaman & keindahan Provinsi Jawa Timur',
               style: TextStyle(
                 fontSize: 16,
               ),
@@ -95,36 +96,48 @@ final List<String> images = [
                 children: <Widget>[
                   _buildCard(
                     context,
-                    'Yogyakarta',
+                    'Surabaya',
                     'assets/imagehome.png',
-                    'Kunjungi Denpasar untuk menikmati keindahan pantainya dan budayanya.',
+                    'Kunjungi Jawa Timur untuk menikmati keindahan pantainya dan budayanya.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Yogya(),
+                        builder: (context) => Surabaya(),
                       ),
                     ),
                   ),
                   SizedBox(height: 16),
                   _buildCard(
                     context,
-                    'Bantul',
+                    'Malang',
                     'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Bantul.',
+                    'Temukan keindahan alam dan sejarah di Jawa Barat.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Bantul(),
+                        builder: (context) => Malang(),
                       ),
                     ),
                   ),
                   SizedBox(height: 16),
                   _buildCard(
                     context,
-                    'Sleman',
+                    'Banyuwangi',
                     'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Sleman.',
+                    'Temukan keindahan alam dan sejarah di Bali.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Sleman(),
+                        builder: (context) => Banyuwangi(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  _buildCard(
+                    context,
+                    'Batu',
+                    'assets/imagehome.png',
+                    'Temukan keindahan alam dan sejarah di Yogyakarta.',
+                    () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => Batu(),
                       ),
                     ),
                   ),

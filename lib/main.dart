@@ -1,19 +1,19 @@
-import 'package:eav1/data/beverages/esteh.dart';
+import 'package:eav1/data/jawa%20timur/malang/minuman/esteh.dart';
 import 'package:flutter/material.dart';
 import 'screen/splash_screen.dart';
-import 'data/food/bakso.dart';
-import 'data/food/segoresek.dart';
-import 'data/beverages/esalpukat.dart';
-import 'data/beverages/eskidul.dart';
-import 'data/beverages/essantan.dart';
-import 'data/beverages/fosco.dart';
-import 'data/food/mie.dart';
-import 'data/food/pecel.dart';
-import 'data/food/rawon.dart';
-import 'data/tourism/destinations/jtpsatu.dart';
-import 'data/tourism/destinations/jtpdua.dart';
-import 'data/tourism/destinations/kww.dart';
-import 'data/tourism/destinations/musangkut.dart';
+import 'data/jawa timur/malang/makanan/bakso.dart';
+import 'data/jawa timur/malang/makanan/segoresek.dart';
+import 'data/jawa timur/malang/minuman/esalpukat.dart';
+import 'data/jawa timur/malang/minuman/eskidul.dart';
+import 'data/jawa timur/malang/minuman/essantan.dart';
+import 'data/jawa timur/malang/minuman/fosco.dart';
+import 'data/jawa timur/malang/makanan/mie.dart';
+import 'data/jawa timur/malang/makanan/pecel.dart';
+import 'data/jawa timur/malang/makanan/rawon.dart';
+import 'data/jawa timur/malang/wisata/jtpsatu.dart';
+import 'data/jawa timur/malang/wisata/jtpdua.dart';
+import 'data/jawa timur/malang/wisata/kww.dart';
+import 'data/jawa timur/malang/wisata/musangkut.dart';
 
 void main() {
   runApp(MyApp());

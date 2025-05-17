@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'bandung.dart'; // Pastikan file jawatimur.dart ada di direktori yang benar
-import 'bogor.dart'; // Pastikan file jawabarat.dart ada di direktori yang benar
-import 'sukabumi.dart'; // Pastikan file bali.dart ada di direktori yang benar
-import 'garut.dart';
-import 'cirebon.dart';
+import 'yogya/yogya.dart';
+import 'bantul/bantul.dart';
+import 'sleman/sleman.dart';
 
-class Jawabarat extends StatelessWidget {
+class Yogyakarta extends StatelessWidget {
 final List<String> images = [
     'assets/imagehome.png',
     'assets/imageprovinsi.png',
@@ -14,7 +12,7 @@ final List<String> images = [
 
   final PageController _pageController = PageController();
 
-  Jawabarat({super.key});
+  Yogyakarta({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +73,7 @@ final List<String> images = [
             ),
             SizedBox(height: 20),
             Text(
-              'Jelajahi Provinsi Jawa Barat',
+              'Jelajahi Provinsi Yogyakarta',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -84,7 +82,7 @@ final List<String> images = [
             ),
             SizedBox(height: 10),
             Text(
-              'Temukan keragaman & keindahan Provinsi Jawa Barat',
+              'Temukan keragaman & keindahan Provinsi Yogyakarta',
               style: TextStyle(
                 fontSize: 16,
               ),
@@ -97,60 +95,36 @@ final List<String> images = [
                 children: <Widget>[
                   _buildCard(
                     context,
-                    'Bandung',
+                    'Yogyakarta',
                     'assets/imagehome.png',
-                    'Kunjungi Bandung untuk menikmati keindahan pantainya dan budayanya.',
+                    'Kunjungi Denpasar untuk menikmati keindahan pantainya dan budayanya.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Bandung(),
+                        builder: (context) => Yogya(),
                       ),
                     ),
                   ),
                   SizedBox(height: 16),
                   _buildCard(
                     context,
-                    'Bogor',
+                    'Bantul',
                     'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Bogor.',
+                    'Temukan keindahan alam dan sejarah di Bantul.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Bogor(),
+                        builder: (context) => Bantul(),
                       ),
                     ),
                   ),
                   SizedBox(height: 16),
                   _buildCard(
                     context,
-                    'Sukabumi',
+                    'Sleman',
                     'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Sukabumi.',
+                    'Temukan keindahan alam dan sejarah di Sleman.',
                     () => Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Sukabumi(),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  _buildCard(
-                    context,
-                    'Garut',
-                    'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Garut.',
-                    () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Garut(),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  _buildCard(
-                    context,
-                    'Cirebon',
-                    'assets/imagehome.png',
-                    'Temukan keindahan alam dan sejarah di Cirebon.',
-                    () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Cirebon(),
+                        builder: (context) => Sleman(),
                       ),
                     ),
                   ),

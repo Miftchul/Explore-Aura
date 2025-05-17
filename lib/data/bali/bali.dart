@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'denpasar.dart';
-import 'ubud.dart';
-import 'kuta.dart';
+import 'denpasar/denpasar.dart';
+import 'ubud/ubud.dart';
+import 'kuta/kuta.dart';
 
 class Bali extends StatelessWidget {
   final List<String> images = [

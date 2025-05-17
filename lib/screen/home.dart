@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../data/region/jawa timur/jawatimur.dart'; // Pastikan file jawatimur.dart ada di direktori yang benar
-import '../data/region/jawa barat/jawabarat.dart'; // Pastikan file jawabarat.dart ada di direktori yang benar
-import '../data/region/bali/bali.dart'; // Pastikan file bali.dart ada di direktori yang benar
-import '../data/region/yogyakarta/yogyakarta.dart'; // Pastikan file yogyakarta.dart ada di direktori yang benar
+import '../data/jawa timur/jawatimur.dart'; // Pastikan file jawatimur.dart ada di direktori yang benar
+import '../data/jawa barat/jawabarat.dart'; // Pastikan file jawabarat.dart ada di direktori yang benar
+import '../data/bali/bali.dart'; // Pastikan file bali.dart ada di direktori yang benar
+import '../data/yogyakarta/yogyakarta.dart'; // Pastikan file yogyakarta.dart ada di direktori yang benar
 import 'dummy.dart'; // Pastikan file yogyakarta.dart ada di direktori yang benar
 
 class Home extends StatelessWidget {
