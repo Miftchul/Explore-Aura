@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class essantan extends StatelessWidget {
-  const essantan({super.key});
+class EsSantan extends StatelessWidget {
+  const EsSantan({super.key});
 
   @override
   Widget build(BuildContext context) {

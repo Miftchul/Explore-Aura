@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class eskidul extends StatelessWidget {
-  const eskidul({super.key});
+class Eskidul extends StatelessWidget {
+  const Eskidul({super.key});
 
   @override
   Widget build(BuildContext context) {

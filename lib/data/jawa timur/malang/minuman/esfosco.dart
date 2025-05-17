@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class fosco extends StatelessWidget {
-  const fosco({super.key});
+class Esfosco extends StatelessWidget {
+  const Esfosco({super.key});
 
   @override
   Widget build(BuildContext context) {
