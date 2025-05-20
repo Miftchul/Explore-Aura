@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class fosco extends StatefulWidget {
+  const fosco({super.key});
+
   @override
   State<fosco> createState() => _foscoState();
 }
