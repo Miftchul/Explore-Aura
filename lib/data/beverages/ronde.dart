@@ -1,18 +1,18 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-class eskidul extends StatefulWidget {
-  const eskidul({super.key});
+class ronde extends StatefulWidget {
+  const ronde({super.key});
 
   @override
-  State<eskidul> createState() => _eskidulState();
+  State<ronde> createState() => _rondeState();
 }
 
-class _eskidulState extends State<eskidul> {
+class _rondeState extends State<ronde> {
   final List<String> images = [
-    'assets/estawonkidul1.jpg',
-    'assets/estawonkidul2.jpg',
-    'assets/estawonkidul4.jpg',
+    'assets/rondetitoni1.jpg',
+    'assets/rondetitoni2.jpg',
+    'assets/rondetitoni3.jpg',
   ];
 
   final PageController _pageController = PageController();
@@ -134,14 +134,14 @@ class _eskidulState extends State<eskidul> {
             ),
             const SizedBox(height: 24),
             const Text(
-              'Es Tawon Kidul Dalem',
+              'Ronde Titoni',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                'Jl. Zainul Arifin No.15, Klojen, Kota Malang, Jawa Timur',
+                'Jl. Zainul Arifin No.17, Klojen, Kota Malang, Jawa Timur',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, height: 1.6),
               ),
@@ -159,7 +159,7 @@ class _eskidulState extends State<eskidul> {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                'Rp. 8.000 / Gelas',
+                'Rp. 7.000 - Rp. 9.000/ Porsi',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, height: 1.6),
               ),
@@ -168,7 +168,7 @@ class _eskidulState extends State<eskidul> {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
-                'Es Campur ini berisikan cincau, tape singkong, kacang hijau, dawet, dan disiram dengan sirup merah sama gula cair',
+                'Minuman hangat ini berisikan bola - bola ketan isi gula yang disajikan dengan kuah jahe dan rempah',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, height: 1.6),
               ),
@@ -196,7 +196,7 @@ class _eskidulState extends State<eskidul> {
                       Icon(Icons.lightbulb_outline, size: 24),
                       SizedBox(width: 8),
                       Text(
-                        'Fun Fact Es Tawon Kidul Dalem',
+                        'Fun Fact Rondei Titoni',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -206,7 +206,7 @@ class _eskidulState extends State<eskidul> {
                   ),
                   SizedBox(height: 12),
                   Text(
-                    'Dinamakan Es Tawon ini karena banyak tawon kecil yang mengerumunin gula dan telah beroperasi sejak tahun 1955 ',
+                    'Ronde Titoni ini telah beroperasi sejak tahun 1948 dan menjadikan tempat favorit untuk menikmati wedang ronde di malang',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 15, height: 1.6),
                   ),

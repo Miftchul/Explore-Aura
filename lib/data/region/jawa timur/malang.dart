@@ -66,7 +66,7 @@ class Malang extends StatelessWidget {
                             route: '/mie',
                           ),
                           _CardItem(
-                            title: 'Pecel',
+                            title: 'Pecel Kawi Hj. Musilah',
                             imagePath: 'assets/pecel.jpg',
                             route: '/pecel',
                           ),
@@ -76,19 +76,24 @@ class Malang extends StatelessWidget {
                             route: '/fosco',
                           ),
                           _CardItem(
-                            title: 'Es Tawon Kidul',
+                            title: 'Es Tawon Kidul Dalem',
                             imagePath: 'assets/eskidul.jpg',
                             route: '/eskidul',
                           ),
                           _CardItem(
-                            title: 'Es Santan',
+                            title: 'Es Santan 68',
                             imagePath: 'assets/essantan.jpg',
                             route: '/essantan',
                           ),
                           _CardItem(
-                            title: 'Es Alpukat Moka',
+                            title: 'Es Alpukat Moka Dempo',
                             imagePath: 'assets/esalpukat.jpg',
                             route: '/esalpukat',
+                          ),
+                          _CardItem(
+                            title: 'Ronde Titoni',
+                            imagePath: 'assets/rondetitoni5.jpg',
+                            route: '/ronde',
                           ),
                         ],
                       ),

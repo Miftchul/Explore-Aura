@@ -1,4 +1,5 @@
 import 'package:eav1/data/beverages/esteh.dart';
+import 'package:eav1/data/beverages/ronde.dart';
 import 'package:flutter/material.dart';
 import 'screen/splash_screen.dart';
 import 'data/food/bakso.dart';
@@ -26,9 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ExploreAura',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: SplashScreen(),
       routes: {
         '/bakso': (context) => BaksoPage(),
@@ -45,7 +44,7 @@ class MyApp extends StatelessWidget {
         '/kww': (context) => const kww(),
         '/musangkut': (context) => const musangkut(),
         '/esteh': (context) => const Esteh(),
-
+        '/ronde': (context) => const ronde(),
       },
     );
   }
