@@ -1,14 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD:lib/data/beverages/eskidul.dart
 class eskidul extends StatefulWidget {
-  const eskidul({super.key});
-=======
-class Eskidul extends StatelessWidget {
-  const Eskidul({super.key});
->>>>>>> 61f1f188727f4681e9eab6ef7a013813d0547660:lib/data/jawa timur/malang/minuman/eskidul.dart
-
   @override
   State<eskidul> createState() => _eskidulState();
 }

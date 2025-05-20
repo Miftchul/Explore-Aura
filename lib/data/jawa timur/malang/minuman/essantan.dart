@@ -1,14 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD:lib/data/beverages/essantan.dart
 class essantan extends StatefulWidget {
-  const essantan({super.key});
-=======
-class EsSantan extends StatelessWidget {
-  const EsSantan({super.key});
->>>>>>> 61f1f188727f4681e9eab6ef7a013813d0547660:lib/data/jawa timur/malang/minuman/essantan.dart
-
   @override
   State<essantan> createState() => _essantanState();
 }

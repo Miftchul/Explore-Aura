@@ -1,14 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD:lib/data/beverages/fosco.dart
 class fosco extends StatefulWidget {
-  const fosco({super.key});
-=======
-class Esfosco extends StatelessWidget {
-  const Esfosco({super.key});
->>>>>>> 61f1f188727f4681e9eab6ef7a013813d0547660:lib/data/jawa timur/malang/minuman/esfosco.dart
-
   @override
   State<fosco> createState() => _foscoState();
 }
