@@ -1,20 +1,10 @@
-import 'package:eav1/data/beverages/esteh.dart';
-import 'package:eav1/data/beverages/ronde.dart';
 import 'package:flutter/material.dart';
 import 'screen/splash_screen.dart';
-import 'data/food/bakso.dart';
-import 'data/food/segoresek.dart';
-import 'data/beverages/esalpukat.dart';
-import 'data/beverages/eskidul.dart';
-import 'data/beverages/essantan.dart';
-import 'data/beverages/fosco.dart';
-import 'data/food/mie.dart';
-import 'data/food/pecel.dart';
-import 'data/food/rawon.dart';
-import 'data/tourism/destinations/jtpsatu.dart';
-import 'data/tourism/destinations/jtpdua.dart';
-import 'data/tourism/destinations/kww.dart';
-import 'data/tourism/destinations/musangkut.dart';
+
+// Loader routes
+import 'data/jawa timur/malang/makanan/list.dart' as makanan;
+import 'data/jawa timur/malang/minuman/list.dart' as minuman;
+import 'data/jawa timur/malang/wisata/list.dart' as wisata;
 
 void main() {
   runApp(MyApp());
@@ -27,24 +17,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ExploreAura',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: SplashScreen(),
       routes: {
-        '/bakso': (context) => BaksoPage(),
-        '/esalpukat': (context) => const EsalpukatPage(),
-        '/eskidul': (context) => const eskidul(),
-        '/essantan': (context) => const essantan(),
-        '/fosco': (context) => const fosco(),
-        '/mie': (context) => const mie(),
-        '/pecel': (context) => const pecel(),
-        '/rawon': (context) => const rawon(),
-        '/segoresek': (context) => const segoresek(),
-        '/jtpsatu': (context) => const Jtpsatu(),
-        '/jtpdua': (context) => const jtpdua(),
-        '/kww': (context) => const kww(),
-        '/musangkut': (context) => const musangkut(),
-        '/esteh': (context) => const Esteh(),
-        '/ronde': (context) => const ronde(),
+        // Makanan Routes
+        ...makanan.malangMakananRoutes,
+        // Minuman Routes 
+        ...minuman.malangMinumanRoutes,
+        // Wisata Routes
+        ...wisata.malangWisataRoutes,
       },
     );
   }

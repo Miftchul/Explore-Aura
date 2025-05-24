@@ -65,51 +65,10 @@ flutter:
     - assets/imagehome.png
     - assets/destinasiwisata.png
     - assets/makan.png
-    - assets/mie.jpg
-    - assets/mie1.jpg
-    - assets/mie2.jpg
-    - assets/mie3.jpg 
-    - assets/pecel.jpg
-    - assets/pecelkawi2.jpg
-    - assets/pecelkawi3.jpg
-    - assets/pecelkawi4.jpg
-    - assets/rawon.jpg
-    - assets/rawon2.jpg
-    - assets/rawon4.jpg
-    - assets/rawon5.jpg
-    - assets/rondetitoni5.jpg
-    - assets/rondetitoni1.jpg
-    - assets/rondetitoni2.jpg
-    - assets/rondetitoni3.jpg
-    - assets/segoresek.jpg
-    - assets/segoresek2.jpg
-    - assets/segoresek3.jpg
-    - assets/segoresek4.jpg
-    - assets/fosco.jpg
-    - assets/fosco3.jpg
-    - assets/fosco1.jpg
-    - assets/fosco5.jpg
-    - assets/essantan.jpg
-    - assets/essantan681.jpg
-    - assets/essantan682.jpg
-    - assets/essantan685.jpg
-    - assets/eskidul.jpg
-    - assets/estawonkidul1.jpg
-    - assets/estawonkidul2.jpg
-    - assets/estawonkidul4.jpg
-    - assets/esalpukat.jpg
-    - assets/esalpukatmoka1.jpg
-    - assets/esalpukatmoka3.jpg
-    - assets/esalpukatmoka5.jpg
-    - assets/bakso.jpg
-    - assets/baksobakar1.jpg
-    - assets/baksobakar3.jpg
-    - assets/baksobakar5.jpg
-    - assets/jtpsatu.jpg
-    - assets/jtpdua.jpg
-    - assets/kww.jpg
-    - assets/musangkut.jpg
-    - assets/ikonmalang.jpg
+    - assets/jawa timur/
+    - assets/jawa barat/
+    - assets/bali/
+    - assets/yogyakarta/
 
   uses-material-design: true
 
