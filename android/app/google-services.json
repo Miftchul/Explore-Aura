@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "24127409463",
+    "project_id": "eav1-46f61",
+    "storage_bucket": "eav1-46f61.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24127409463:android:0289e543b9789903e09eb2",
+        "android_client_info": {
+          "package_name": "com.example.eav1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfHB0tGvlZ1gvNE7xORYvaYH1YD3GFEgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

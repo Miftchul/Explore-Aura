@@ -1,12 +1,20 @@
+import 'package:eav1/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'screen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:eav1/firebase_options.dart';
+import 'package:eav1/services/hive_service.dart';
+import 'package:eav1/screens/admin/admin_dashboard_screen.dart'; // Import AdminDashboardScreen
 
-// Loader routes
-import 'data/jawa timur/malang/makanan/list.dart' as makanan;
-import 'data/jawa timur/malang/minuman/list.dart' as minuman;
-import 'data/jawa timur/malang/wisata/list.dart' as wisata;
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    await HiveService.initialize();
+  } catch (e) {
+    print('Error initializing: $e');
+  }
   runApp(MyApp());
 }
 
@@ -20,15 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
-      routes: {
-        // Makanan Routes
-        ...makanan.malangMakananRoutes,
-        // Minuman Routes 
-        ...minuman.malangMinumanRoutes,
-        // Wisata Routes
-        ...wisata.malangWisataRoutes,
-      },
+      // home: const AdminDashboardScreen(), // Langsung tampilkan AdminDashboardScreen
+
+      home: SplashScreen()
     );
   }
 }

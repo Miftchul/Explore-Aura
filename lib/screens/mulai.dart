@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart'; // Pastikan file home.dart ada di direktori yang benar
+import 'user/home.dart'; // Pastikan file home.dart ada di direktori yang benar
 
 class MulaiPage extends StatelessWidget {
   const MulaiPage({super.key});
