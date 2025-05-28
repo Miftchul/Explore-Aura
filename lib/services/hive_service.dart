@@ -1,17 +1,29 @@
 // lib/services/hive_service.dart
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:eav1/models/foto_data.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:path_provider/path_provider.dart';
-import 'package:eav1/models/foto_data.dart'; // Import model FotoData
-import 'package:path/path.dart' as path;
+import 'dart:io';
 
 class HiveService {
   static const String fotoBoxName = 'fotoBox';
   static Box<FotoData>? _fotoBox;
 
   static Future<void> initialize() async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
-    await Hive.initFlutter(appDocumentDir.path);
-    Hive.registerAdapter(FotoDataAdapter()); // Register adapter
+    if (kIsWeb) {
+      // Untuk Web, init tanpa path
+      await Hive.initFlutter();
+    } else {
+      // Untuk Mobile, butuh path
+      final dir = await getApplicationDocumentsDirectory();
+      await Hive.initFlutter(dir.path);
+    }
+
+    if (!Hive.isAdapterRegistered(0)) {
+      Hive.registerAdapter(FotoDataAdapter()); // Pastikan adapter tidak duplikat
+    }
+
     _fotoBox = await Hive.openBox<FotoData>(fotoBoxName);
   }
 

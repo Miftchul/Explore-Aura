@@ -103,7 +103,7 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
   ) {
     final fotoId = item['fotoId']?.toString() ?? '';
     final fotoData = fotoId.isNotEmpty ? HiveService.getFotoData(fotoId) : null;
-    final fotoPath = fotoData?.fotoPath;
+    final fotoPath = fotoData?.url;
 
     dynamic model;
     switch (kategori) {

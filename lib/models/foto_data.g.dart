@@ -18,18 +18,21 @@ class FotoDataAdapter extends TypeAdapter<FotoData> {
     };
     return FotoData(
       fotoId: fields[0] as String,
-      fotoPath: fields[1] as String,
+      base64: fields[1] as String?,
+      url: fields[2] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, FotoData obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.fotoId)
       ..writeByte(1)
-      ..write(obj.fotoPath);
+      ..write(obj.base64)
+      ..writeByte(2)
+      ..write(obj.url);
   }
 
   @override

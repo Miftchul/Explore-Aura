@@ -3,13 +3,16 @@ import 'package:hive/hive.dart';
 
 part 'foto_data.g.dart'; // Ini akan dibuat oleh hive_generator
 
-@HiveType(typeId: 0) // Ganti dengan ID yang unik
-class FotoData {
+@HiveType(typeId: 0)
+class FotoData extends HiveObject {
   @HiveField(0)
   String fotoId;
 
   @HiveField(1)
-  String fotoPath;
+  String? base64; // ✅ Tambahkan ini untuk web
 
-  FotoData({required this.fotoId, required this.fotoPath});
+  @HiveField(2)
+  String? url; // ✅ Alternatif jika pakai Firebase
+
+  FotoData({required this.fotoId, this.base64, this.url});
 }

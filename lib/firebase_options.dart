@@ -55,6 +55,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '24127409463',
     projectId: 'eav1-46f61',
     authDomain: 'eav1-46f61.firebaseapp.com',
+    databaseURL: 'https://eav1-46f61-default-rtdb.firebaseio.com',
     storageBucket: 'eav1-46f61.firebasestorage.app',
     measurementId: 'G-KK4NCBNDR6',
   );
@@ -64,6 +65,8 @@ class DefaultFirebaseOptions {
     appId: '1:24127409463:android:0289e543b9789903e09eb2',
     messagingSenderId: '24127409463',
     projectId: 'eav1-46f61',
+    databaseURL: 'https://eav1-46f61-default-rtdb.firebaseio.com',
     storageBucket: 'eav1-46f61.firebasestorage.app',
   );
+
 }

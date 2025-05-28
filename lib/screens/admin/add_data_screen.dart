@@ -75,7 +75,7 @@ class _AddDataScreenState extends State<AddDataScreen> {
         final savedImage = await _image!.copy('${appDir.path}/$fileName');
         final fotoPath = savedImage.path;
 
-        final fotoData = FotoData(fotoId: _fotoId!, fotoPath: fotoPath);
+        final fotoData = FotoData(fotoId: _fotoId!, base64: null, url: fotoPath);
         await HiveService.saveFotoData(fotoData);
 
         // 2. Simpan Data Teks ke Firebase

@@ -1,9 +1,11 @@
+import 'package:eav1/screens/login.dart';
 import 'package:eav1/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:eav1/firebase_options.dart';
 import 'package:eav1/services/hive_service.dart';
-import 'package:eav1/screens/admin/admin_dashboard_screen.dart'; // Import AdminDashboardScreen
+import 'package:eav1/screens/admin/admin_dashboard_screen.dart';
+// import 'package:eav1/screens/login.dart'; // This import is redundant
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +17,7 @@ void main() async {
   } catch (e) {
     print('Error initializing: $e');
   }
-  runApp(MyApp());
+  runApp(const MyApp()); // Added const here as MyApp is a const StatelessWidget
 }
 
 class MyApp extends StatelessWidget {
@@ -28,9 +30,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const AdminDashboardScreen(), // Langsung tampilkan AdminDashboardScreen
-
-      home: SplashScreen()
+      home: const AdminDashboardScreen(), // Directly showing AdminDashboardScreen
+      // home: const SplashScreen(),
+      // home: const LoginScreen(),
     );
   }
 }

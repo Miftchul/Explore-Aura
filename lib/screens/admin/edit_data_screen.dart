@@ -59,7 +59,7 @@ void initState() {
   // Ambil path foto lama dari Hive
   if (_fotoId != null) {
     final fotoData = HiveService.getFotoData(_fotoId!);
-    _oldFotoPath = fotoData?.fotoPath;
+    _oldFotoPath = fotoData?.url;
   }
 }
 
@@ -136,7 +136,7 @@ void initState() {
           final savedImage = await _image!.copy('${appDir.path}/$fileName');
           final fotoPath = savedImage.path;
 
-          final fotoData = FotoData(fotoId: _fotoId!, fotoPath: fotoPath);
+          final fotoData = FotoData(fotoId: _fotoId!, base64: null, url: fotoPath);
           await HiveService.saveFotoData(fotoData);
         }
 
